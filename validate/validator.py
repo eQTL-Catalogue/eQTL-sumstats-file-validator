@@ -10,14 +10,10 @@ from pandas_schema import Schema
 from validate.schema import *
 
 """
-GWAS Summary statistics file validator 
+eQTL Summary statistics file validator 
 - using pandas_schema https://github.com/TMiguelT/PandasSchema
-It can be run on files pre- ('standard') or post- harmonisation ('harmonised') 
-and also in the 'curator' format. 
-File names and numbers of fields on each row are checked. 
-Fields validated in the standard and harmonised stage are all the required fields 
-for HDF5 convertion. The curator format validation only checks the file name, 
-the table shape and the pvalue.
+Field names and numbers of fields on each row are checked. 
+Table shape must be square, schema defined in schema.py --> VALIDATORS.
 """
 
 
