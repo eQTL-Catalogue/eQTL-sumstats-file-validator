@@ -9,11 +9,11 @@ A file validator for validating eQTL summary statistics TSV files prior to conve
 
 ## Running the validator
 To run the validator on a file:
-- `ss-validate -f <file_to_validate.tsv> --logfile <logfile_name>`
+- `eqss-validate -f <file_to_validate.tsv> --logfile <logfile_name>`
 
 Information and errors are logged to the console and errors logged to the file specified. A console output might look like:
 ```
-(INFO): Filename is good!
+(INFO): Validating headers...
 (INFO): Validating file...
 (ERROR): Length of row 7 is: 16 instead of 15
 (ERROR): Please fix the table. Some rows have different numbers of columns to the header
