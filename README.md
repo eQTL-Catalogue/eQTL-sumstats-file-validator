@@ -4,6 +4,7 @@ A file validator for validating eQTL summary statistics TSV files prior to conve
 
 ## Installation
 - `git clone https://github.com/eQTL-Catalogue/eQTL-sumstats-file-validator.git`
+- `cd eQTL-sumstats-file-validator/`
 - `pip install -r requirments.txt`
 - `pip install .`
 
