@@ -1,9 +1,11 @@
 # Summary Statistics TSV file Validator
 
-A file validator for validating GWAS summary statistics TSV files prior to and post [harmonisation](https://github.com/EBISPOT/sum-stats-formatter/tree/master/harmonisation) using [pandas_schema](https://tmiguelt.github.io/PandasSchema/). The purpose is to validate files before their [conversion to HDF5](https://github.com/EBISPOT/SumStats/). 
+A file validator for validating eQTL summary statistics TSV files prior to conversion to HDF5. The validator uses [pandas_schema](https://tmiguelt.github.io/PandasSchema/). 
 
 ## Installation
-- `pip install ss-validate`
+- `git clone https://github.com/eQTL-Catalogue/eQTL-sumstats-file-validator.git`
+- `pip install -r requirments.txt`
+- `pip install .`
 
 ## Running the validator
 To run the validator on a file:
@@ -25,8 +27,3 @@ The errors from the output tell us that row seven has too many columns and row o
 
    Once this number of erroneous rows has been reached, stop looking for more.
 - `--drop-bad-lines` : _bool, default False_
-
-   Drops the the lines with errors from the file and writes it to a new file called <file_to_validate.tsv.valid>
-- `--stage` : _{'standard', 'harmonised', 'curated'}, default 'standard'_
-
-   The stage the file is in. It is either standard format ('standard'), harmonised ('harmonised') or pre-standard in the custom curated format ('curated'). Recommended to leave as default.

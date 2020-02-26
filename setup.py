@@ -18,6 +18,6 @@ setup(
         "console_scripts": ['eqss-validate = validate.validator:main']
     },
     author='EBI SPOT',
-    author_email='gwas-info@ebi.ac.uk',
+    author_email='eqtlcatalogue@ebi.ac.uk',
     install_requires=['pandas_schema']
 )
