@@ -15,11 +15,11 @@ VALID_CHROMOSOMES = ['1', '2', '3', '4', '5', '6', '7', '8',
 
 
 VALIDATORS = {
-    PVAL_DSET: Column(PVAL_DSET, [CanConvertValidation(DSET_TYPES[PVAL_DSET]), InInclusiveRangeValidation(0, 1)], allow_empty=True),
+    PVAL_DSET: Column(PVAL_DSET, [CanConvertValidation(DSET_TYPES[PVAL_DSET]), InInclusiveRangeValidation(0, 1)], allow_empty=False),
     BETA_DSET: Column(BETA_DSET, [CanConvertValidation(float)], allow_empty=True),
     SNP_DSET: Column(SNP_DSET, [CanConvertValidation(DSET_TYPES[SNP_DSET]), MatchesPatternValidation(r'^chr[0-9]+_[0-9]+_[ACTGNactgn]+_[ACTGNactgn]+|LONG_STRING$')], allow_empty=True),
-    CHR_DSET: Column(CHR_DSET, [InListValidation(VALID_CHROMOSOMES)], allow_empty=True),
-    BP_DSET: Column(BP_DSET, [CanConvertValidation(DSET_TYPES[BP_DSET]), InInclusiveRangeValidation(1, 999999999)], allow_empty=True),
+    CHR_DSET: Column(CHR_DSET, [InListValidation(VALID_CHROMOSOMES)], allow_empty=False),
+    BP_DSET: Column(BP_DSET, [CanConvertValidation(DSET_TYPES[BP_DSET]), InInclusiveRangeValidation(1, 999999999)], allow_empty=False),
     EFFECT_DSET: Column(EFFECT_DSET, [MatchesPatternValidation(r'^[ACTGNactgn]+|LONG_STRING$')], allow_empty=True),
     OTHER_DSET: Column(OTHER_DSET, [MatchesPatternValidation(r'^[ACTGNactgn]+|LONG_STRING$')], allow_empty=True),
     FREQ_DSET: Column(FREQ_DSET, [CanConvertValidation(float)], allow_empty=True),
